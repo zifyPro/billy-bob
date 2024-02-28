@@ -1,8 +1,10 @@
 // userRoutes.js
 const express = require("express");
-const router = express.Router();
-const userController = require("../controllers/userController");
+const { Router } = require("express");
+const getAllProduct = require("../handlers/HandlresProductos");
 
-router.get("/user/:id", userController.getUser);
+const mainRouter = Router();
 
-module.exports = router;
+mainRouter.get("/Productos", getAllProduct);
+
+module.exports = mainRouter;
