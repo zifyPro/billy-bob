@@ -1,4 +1,6 @@
-const { default: getProduct } = require("../controllers/getProductos");
+const {
+  default: getProduct,
+} = require("../../controllers/Productos/getProductos");
 
 const getAllProduct = async (req, res) => {
   try {
