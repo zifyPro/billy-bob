@@ -1,18 +1,22 @@
+const { Op } = require("sequelize");
 const { Productos } = require("../../db");
 
-const getProductById = async (id) => {
-  const productoDb = [await Productos.findByPk(id)];
-  const newproducto = productoDb.map((producto) => {
+const ProductTitle = async (title) => {
+  const productDb = await Productos.findAll({
+    where: { title: { [Op.iLike]: `%${title}%` } },
+  });
+  const newproduct = productDb.map((product) => {
     return {
-      id: producto.id,
-      title: producto.title,
-      description: producto.description,
-      price: producto.price,
-      img: producto.img,
-      type: producto.type,
-      puntos: producto.puntos,
+      id: product.id,
+      title: product.title,
+      description: product.description,
+      price: product.price,
+      img: product.img,
+      type: product.type,
+      puntos: product.puntos,
     };
   });
-  return newproducto[0];
+
+  return newproduct;
 };
-module.exports = getProductById;
+module.exports = ProductTitle;

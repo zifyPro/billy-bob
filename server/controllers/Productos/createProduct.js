@@ -1,6 +1,6 @@
 const { Productos } = require("../../db");
 
-const createProducto = async () => {
+const createProducto = async (data) => {
   const response = await Productos.create({ data });
   return response;
 };
