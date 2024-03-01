@@ -8,6 +8,9 @@ const HandlersCreateProductos = require("../handlers/ProductosHandlers/handlersC
 const HandlersById = require("../handlers/ProductosHandlers/HandlersById");
 const TitleHandlersProduct = require("../handlers/ProductosHandlers/handleTitle");
 const HandlersCreateVentas = require("../handlers/VentasHandlers/HandlersCreate");
+const HandlersIdVentas = require("../handlers/VentasHandlers/HandlersById");
+const HandlersUpdateVentas = require("../handlers/VentasHandlers/HandlersUpdate");
+const HandlersVentas = require("../handlers/VentasHandlers/HandlersVentas");
 
 const mainRouter = Router();
 
@@ -16,8 +19,12 @@ mainRouter.get("/Productos/?title", TitleHandlersProduct);
 mainRouter.get("/Productos", getAllProduct);
 mainRouter.post("/Productos", HandlersCreateProductos);
 mainRouter.delete("/Productos/delete", ProductDelete);
+
 mainRouter.get("/Usuarios", UsuariosHandlers);
 
+mainRouter.get("/Ventas/:id", HandlersIdVentas);
+mainRouter.get("/Ventas", HandlersVentas);
 mainRouter.post("/Ventas", HandlersCreateVentas);
+mainRouter.put("/Ventas", HandlersUpdateVentas);
 
 module.exports = mainRouter;
