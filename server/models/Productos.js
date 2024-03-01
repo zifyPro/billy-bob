@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   sequelize.define(
-    "Producto",
+    "Productos",
     {
       id: {
         type: DataTypes.UUID,
@@ -20,6 +20,7 @@ module.exports = (sequelize) => {
       },
       price: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
         allowNull: false,
       },
       img: {
@@ -32,6 +33,7 @@ module.exports = (sequelize) => {
       },
       puntos: {
         type: DataTypes.INTEGER,
+        defaultValue: 0,
         allowNull: false,
       },
     },

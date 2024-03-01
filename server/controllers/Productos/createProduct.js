@@ -1,7 +1,14 @@
 const { Productos } = require("../../db");
 
-const createProducto = async (data) => {
-  const response = await Productos.create({ data });
+const createProducto = async (title, description, price, img, type, puntos) => {
+  const response = await Productos.create({
+    title,
+    description,
+    price,
+    img,
+    type,
+    puntos,
+  });
   return response;
 };
 module.exports = createProducto;
