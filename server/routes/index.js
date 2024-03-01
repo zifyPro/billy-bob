@@ -11,12 +11,14 @@ const HandlersCreateVentas = require("../handlers/VentasHandlers/HandlersCreate"
 const HandlersIdVentas = require("../handlers/VentasHandlers/HandlersById");
 const HandlersUpdateVentas = require("../handlers/VentasHandlers/HandlersUpdate");
 const HandlersVentas = require("../handlers/VentasHandlers/HandlersVentas");
+const UpdateProductoHandlers = require("../handlers/ProductosHandlers/HandlersProductosUpdate");
 
 const mainRouter = Router();
 
 mainRouter.get("/Productos/:id", HandlersById);
 mainRouter.get("/Productos/?title", TitleHandlersProduct);
 mainRouter.get("/Productos", getAllProduct);
+mainRouter.put("Productos/update", UpdateProductoHandlers);
 mainRouter.post("/Productos", HandlersCreateProductos);
 mainRouter.delete("/Productos/delete", ProductDelete);
 
