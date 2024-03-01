@@ -12,7 +12,7 @@ const Home = () => {
   }, [dispatch]);
   return (
     <div>
-      <h1>holaaa</h1>
+      <h1>jonyyy</h1>
       <h1>chupala</h1>
       <Cards product={newProduct} />
     </div>

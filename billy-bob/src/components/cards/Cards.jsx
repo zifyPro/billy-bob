@@ -1,17 +1,18 @@
 import Card from "../card/Card";
 
 const Cards = ({ product }) => {
+  console.log(product);
   return (
     <div>
-      {product.map((product) => (
+      {product.map(({ id, title, description, price, img, type }) => (
         <Card
-          key={product?.id}
-          id={product?.id}
-          title={product?.title}
-          description={product?.description}
-          price={product?.price}
-          img={product?.img}
-          type={product?.type}
+          key={id}
+          id={id}
+          title={title}
+          description={description}
+          price={price}
+          img={img}
+          type={type}
         />
       ))}
     </div>

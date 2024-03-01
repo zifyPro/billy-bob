@@ -1,4 +1,4 @@
-const Card = (product) => {
+const Card = ({ id, title, description, price, img, type }) => {
   //   const handlerBuy = () => {
   //     addProductToCart(product);
   //   };
@@ -24,15 +24,15 @@ const Card = (product) => {
     <div>
       <div>
         <div>
-          <img src={product?.img} alt="Imagen de comida" />
+          <img src={img} alt="Imagen de comida" />
         </div>
         <div>
-          <div>{product?.title}</div>
-          <p>{product?.description}</p>
-          <button onClick={alertDetails}>Leer más</button>
+          <div>{title}</div>
+          <p>{description}</p>
+          {/* <button onClick={alertDetails}>Leer más</button> */}
         </div>
         <div>
-          <div>{"$" + product?.price}</div>
+          <div>{"$" + price}</div>
           {/* <button
             onClick={handlerBuy}
           >
