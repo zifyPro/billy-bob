@@ -1,20 +1,16 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Cards from "../../components/cards/Cards";
-import { getProduct } from "../../Redux/actions";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const newProduct = useSelector((state) => state?.product);
-  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(getProduct());
-  }, [dispatch]);
+  const HandlerNavigate = () => {
+    navigate("/store");
+  };
   return (
     <div>
       <h1>jonyyy</h1>
       <h1>chupala</h1>
-      <Cards product={newProduct} />
+      <button onClick={HandlerNavigate}>store</button>
     </div>
   );
 };
