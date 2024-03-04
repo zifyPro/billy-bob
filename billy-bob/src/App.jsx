@@ -7,7 +7,7 @@ import Menus from "./components/menu/menu";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[url('https://res.cloudinary.com/divxrmzge/image/upload/v1708176856/ojmk9i0nuuov2f2ahtke.jpg')] bg-cover bg-center">
       {/* <Navbar /> */}
       <Menus />
       <Routes>

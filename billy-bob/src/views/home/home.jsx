@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Foter from "../../components/Foter/Foter";
 import "tailwindcss/tailwind.css";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
