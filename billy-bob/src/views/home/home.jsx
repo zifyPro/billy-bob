@@ -4,7 +4,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const HandlerNavigate = () => {
-    navigate("/store");
+    navigate("/Store");
   };
   return (
     <div>

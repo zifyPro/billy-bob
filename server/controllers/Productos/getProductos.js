@@ -8,7 +8,7 @@ const getProduct = async () => {
       id: product.id,
       title: product.title,
       description: product.description,
-      img: product.description,
+      img: product.img,
       price: product.price,
       type: product.type,
       puntos: product.puntos,
