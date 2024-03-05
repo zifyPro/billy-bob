@@ -41,7 +41,7 @@ const Card = (product) => {
             {product?.description}
           </p>
           <button
-            className="block text-lg leading-tight font-medium text-yellow-500 hover:underline -mt-1"
+            className="block text-lg leading-tight font-medium text-yellow-500 hover:underline -mt-8 mx-auto"
             onClick={alertDetails}
           >
             Leer más
