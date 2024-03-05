@@ -21,6 +21,8 @@ const Card = (product) => {
 
   if (!["comida", "bebida", "promos"].includes(product.type)) {
     return null;
+  } else if (product.type !== "puntos") {
+    return null;
   }
 
   return (

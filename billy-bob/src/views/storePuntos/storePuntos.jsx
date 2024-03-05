@@ -1,27 +1,17 @@
 // import useStore from "@/zustand/store";
 import { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa6";
-// import Swal from "sweetalert2";
+import { getProduct } from "../../Redux/actions";
+import { useDispatch, useSelector } from "react-redux";
+import Swal from "sweetalert2";
 
 const NewProductPuntos = () => {
-  const { getHamburguesas, setFilter, product } = useStore((state) => ({
-    getHamburguesas: state.getHamburguesas,
-    setFilter: state.setFilter,
-    product: state.product,
-  }));
-
-  const [isLoading, setIsLoading] = useState(true);
+  const product = useSelector((state) => state.allProduct);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getHamburguesas()
-      .then(() => {
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
-      });
-  }, []);
+    dispatch(getProduct());
+  }, [dispatch]);
 
   const handlerBuy = () => {
     addProductToCart(product);
@@ -53,7 +43,6 @@ const NewProductPuntos = () => {
                 <img
                   className="h-32 w-7/5 object-cover"
                   src={filteredItem?.img}
-                  alt="Imagen de comida"
                 />
               </div>
               <div className="ml-5 w-35">
