@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../../Redux/actions";
+import { filterProduct, getProduct } from "../../Redux/actions";
 import Cards from "../../components/cards/Cards";
 
 const Store = () => {
@@ -10,10 +10,18 @@ const Store = () => {
   useEffect(() => {
     dispatch(getProduct());
   }, [dispatch]);
+
+  const HandlerFilter = (type) => {
+    dispatch(filterProduct(type));
+  };
   return (
     <div>
-      <h1>intento 2</h1>
-      <Cards product={newProduct} />
+      <button onClick={() => HandlerFilter("comida")}>Comida</button>
+      <button onClick={() => HandlerFilter("bebida")}>Bebida</button>
+      <button onClick={() => HandlerFilter("promos")}>Promos</button>
+      <div className="flex flex-col items-center h-[65vh]">
+        <Cards product={newProduct} />
+      </div>
     </div>
   );
 };

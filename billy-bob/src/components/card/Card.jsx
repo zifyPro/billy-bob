@@ -1,3 +1,6 @@
+import Swal from "sweetalert2";
+// import { FaCartPlus } from "react-icons/fa6";
+
 const Card = (product) => {
   //   const handlerBuy = () => {
   //     addProductToCart(product);

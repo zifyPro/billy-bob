@@ -27,18 +27,18 @@ const NewProductPuntos = () => {
     addProductToCart(product);
   };
 
-  //   const alertDetails = () => {
-  //     Swal.fire({
-  //       title: product.title,
-  //       text: product.description,
-  //       imageUrl: product.img,
-  //       imageWidth: 400,
-  //       imageHeight: 200,
-  //       imageAlt: product.title,
-  //       background: "#19191A", // fondo negro
-  //       color: "#A2A2A3", // texto blanco
-  //     });
-  //   };
+  const alertDetails = () => {
+    Swal.fire({
+      title: product.title,
+      text: product.description,
+      imageUrl: product.img,
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: product.title,
+      background: "#19191A", // fondo negro
+      color: "#A2A2A3", // texto blanco
+    });
+  };
   return (
     <div>
       {product

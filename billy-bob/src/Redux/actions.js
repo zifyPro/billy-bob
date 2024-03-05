@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GET_PRODUCT } from "./actions-types";
+import { FILTER_PRODUCT, GET_PRODUCT } from "./actions-types";
 
 export const getProduct = () => {
   return async (dispatch) => {
@@ -10,4 +10,8 @@ export const getProduct = () => {
       payload: response.data,
     });
   };
+};
+
+export const filterProduct = (type) => {
+  return { type: FILTER_PRODUCT, payload: type };
 };
