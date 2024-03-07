@@ -8,7 +8,7 @@ import Login from "./components/Login/login";
 
 function App() {
   return (
-    <div className="bg-[url('https://res.cloudinary.com/divxrmzge/image/upload/v1708176856/ojmk9i0nuuov2f2ahtke.jpg')] bg-cover bg-center">
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
