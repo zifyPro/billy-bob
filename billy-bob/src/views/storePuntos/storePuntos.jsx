@@ -36,7 +36,7 @@ const NewProductPuntos = () => {
         .map((filteredItem) => (
           <div
             key={filteredItem?.id}
-            className="mx-auto bg-black rounded-xl shadow-md overflow-hidden w-[92vw] m-4 h-32 md:w-11/12"
+            className="mx-auto bg-black rounded-xl shadow-md overflow-hidden w-[92vw] m-4 h-32 md:w-10/13"
           >
             <div className="flex">
               <div className="flex-shrink-0">
