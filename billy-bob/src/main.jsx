@@ -5,20 +5,21 @@ import "./index.css";
 import Store from "./Redux/store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-// import { ClerkProvider } from "@clerk/clerk-react";
+import { ClerkProvider } from "@clerk/clerk-react";
 
-// const PUBLISHABLE_KEY = process.env.VITE_CLERK_PUBLISHABLE_KEY;
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-// if (!PUBLISHABLE_KEY) {
-//   throw new Error("Missing Publishable Key");
-// }
+console.log("holaaaaaaaaaaa pa", PUBLISHABLE_KEY);
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  // <ClerkProvider frontendApi={PUBLISHABLE_KEY}>
-  <Provider store={Store}>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Provider>
-  // </ClerkProvider>
+  <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+    <Provider store={Store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </ClerkProvider>
 );
