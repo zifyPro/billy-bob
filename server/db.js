@@ -41,7 +41,7 @@ Productos.belongsToMany(Ventas, { through: "Productos_Ventas" }); //de muchos a 
 Ventas.belongsToMany(Productos, { through: "Productos_Ventas" }); // de muchos a muchos
 Usuarios.hasMany(Ventas, { as: "Ventas_User" }); // Un usuario puede tener muchas ventas
 Ventas.belongsTo(Usuarios); // Una venta pertenece a un usuario
-Productos.belongsToMany(Ingredientes, { through: "Producto_Ingredientes" }); //los productos pueden tener varios ingredientes
+Productos.belongsToMany(Ingredientes, { through: "Producto_Ingredientes" }); //los productos pueden tener varios Ingredientes
 Ingredientes.belongsToMany(Productos, { through: "Producto_Ingredientes" }); //los ingredientes pueden tener varios productos
 
 module.exports = {
