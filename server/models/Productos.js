@@ -20,7 +20,6 @@ module.exports = (sequelize) => {
       },
       price: {
         type: DataTypes.INTEGER,
-        defaultValue: 0,
         allowNull: false,
       },
       img: {

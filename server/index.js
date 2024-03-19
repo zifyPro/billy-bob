@@ -22,7 +22,7 @@ app.use(cors()); // Agrega esta línea para habilitar CORS
 app.use("/", routes);
 
 // Sincroniza todos los modelos a la base de datos.
-conn.sync({ force: false }).then(() => {
+conn.sync({ alter: true }).then(() => {
   // Inicia el servidor
   app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

@@ -1,6 +1,6 @@
 const { Ingredientes } = require("../../db");
 
-const CreateIngredientes = async ({ nombre, cantidad, img }) => {
+const CreateIngredientes = async (nombre, cantidad, img) => {
   const response = await Ingredientes.create({
     nombre,
     cantidad,

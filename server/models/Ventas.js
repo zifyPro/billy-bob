@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
         primaryKey: true,
       },
       nombre: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       direccion: {
@@ -18,11 +18,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       telefono: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      numeroDeOrden: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       estadoDeProducto: {
@@ -31,6 +27,10 @@ module.exports = (sequelize) => {
       },
       compraRealizada: {
         type: DataTypes.DATE,
+        defaultValue: DataTypes.DATE,
+      },
+      tipoDePago: {
+        type: DataTypes.STRING,
       },
     },
     { timestamps: false }
